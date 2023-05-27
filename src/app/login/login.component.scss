@@ -1,0 +1,547 @@
+// sso sign in css
+
+.sso-btn {
+    justify-content: center;
+    align-items: center;
+    min-width: 250px;
+    // height: 40px;
+    display: flex;
+    border-width: 0;
+    background: white; // static
+    color: #737373; // static
+    border-radius: 5px;
+    white-space: nowrap;
+    // box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%); // static
+    box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 5px 0px;
+    transition-property: background-color, box-shadow;
+    transition-duration: 150ms;
+    transition-timing-function: ease-in-out;
+    padding: 4%;
+  
+    &:focus,
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 5px 0px;
+      background: rgba(9, 30, 66, 0.02) !important;
+    }
+  
+    &:active {
+      background-color: #e5e5e5; // static
+      box-shadow: none;
+      transition-duration: 10ms;
+    }
+  
+    cursor: pointer;
+  
+    .sso-icon-wrapper {
+      // display: inline-block;
+      // vertical-align: middle;
+      // margin: 8px 0 8px 8px;
+      // width: 18px;
+      // height: 18px;
+      // box-sizing: border-box;
+      text-align: center;
+      display: flex;
+    }
+  
+    .btn-text {
+      display: inline-block;
+      vertical-align: middle;
+      // padding: 0 24px;
+      font-size: 14px;
+      font-weight: bold;
+      font-family: "Roboto", arial, sans-serif;
+      // margin-right: 8px;
+    }
+  }
+  
+  .sso-icon {
+    padding-right: 10px;
+    width: 20px;
+    max-height: 20px;
+  }
+  
+  // @import url(https://fonts.googleapis.com/css?family=Roboto:500);
+  
+  :host ::ng-deep .login-card .mat-form-field-label {
+    font-size: 90%;
+  }
+  
+  .langSelectOption {
+    height: 35px !important;
+    line-height: 35px !important;
+  }
+  
+  :host ::v-deep .mat-checkbox-layout .mat-checkbox-label {
+    // not used
+    line-height: 24px;
+    font-size: 12px;
+  }
+  
+  :host ::v-deep .mat-checkbox.mat-accent .mat-checkbox-inner-container {
+    display: inline-block;
+    height: 15px;
+    line-height: 0;
+    margin: auto;
+    margin-right: 8px;
+    order: 0;
+    position: relative;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 15px;
+    flex-shrink: 0;
+  }
+  
+  :host ::v-deep .mat-checkbox-checked.mat-accent .mat-checkbox-inner-container {
+    display: inline-block;
+    height: 15px;
+    line-height: 0;
+    margin: auto;
+    margin-right: 8px;
+    order: 0;
+    position: relative;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 15px;
+    flex-shrink: 0;
+  }
+  
+  :host ::v-deep .mat-checkbox.mat-accent .mat-checkbox-inner-container .mat-checkbox-frame {
+    background-color: transparent;
+    transition: border-color 90ms cubic-bezier(0, 0, 0.2, 0.1);
+    border-width: 2px;
+    border-style: solid;
+  }
+  
+  ::ng-deep .pinvoice-remember-me {
+  
+    & .mat-checkbox-background,
+    .mat-checkbox-frame {
+      border-radius: 4px !important;
+      border-width: 1px !important;
+    }
+  }
+  
+  .pinvoice-lgn-card-rt-section {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .pinvoice-fields {
+    padding-top: 1.5% !important;
+    padding-bottom: 1.5% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+  }
+  
+  .pinvoice-logo-fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60%;
+    margin-top: 20% !important;
+  }
+  
+  .epb-middle-sec {
+    // padding: 4% 5% 0% 5%;
+    padding: 0;
+    height: 30%;
+    // font-size: 12.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2%;
+  }
+  
+  .epb-bottom-sec {
+    text-align: center;
+    padding-left: 5% !important;
+    display: flex;
+    align-items: center;
+  }
+  
+  .epmlgn-locale-cust-btn {
+    width: fit-content;
+    float: right;
+    height: 28px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .chkbox-lbl-clr {
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .main {
+    pointer-events: all;
+    background-size: 100% 100%;
+    background-position: top center;
+    width: 100%;
+    overflow: auto;
+    height: 100%;
+    padding-top: 0;
+  }
+  
+  .login {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin: auto;
+  
+    .login-title {
+      // not used
+      padding-top: 0%;
+      display: flex;
+    }
+  
+    .login-fields {
+      padding-left: 5%;
+      padding-right: 5%;
+  
+      mat-form-field {
+        width: 100%;
+      }
+    }
+  
+    .errorMsg {
+      padding-left: 5%;
+      height: 36px;
+    }
+  
+    .login-btn {
+      // padding: 4% 0% 5% 5%;
+      float: right;
+  
+      button {
+        min-width: 60%;
+        border-radius: 18px;
+        letter-spacing: 1px;
+        font-weight: 100;
+        height: 30px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+  
+        color: #ffffff;
+        background-color: #193b4e;
+      }
+    }
+  }
+  
+  .app-icon-locale {
+    font-size: 17px;
+    cursor: pointer;
+    margin-left: 4px;
+  }
+  
+  .pt-0 {
+    padding-top: 0;
+  }
+  
+  .pb-0 {
+    padding-bottom: 0;
+  }
+  
+  .sso-sign-btn {
+    padding: 0% 26% 1% 26%;
+    float: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+  }
+  
+  .pinvoice-help-div {
+    text-align: center;
+  }
+  
+  .epmlgn-heading-div {
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-bottom: 5%;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 500;
+    font-family: Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
+  }
+  
+  .epblgn-heading-div {
+    padding-left: 4% !important;
+    padding-right: 5% !important;
+  }
+  
+  .epm-title-logo {
+    width: 290px;
+  }
+  
+  .epb-title-logo {
+    width: 100px;
+    height: 60px;
+  }
+  
+  .epm-title-logo-wrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: 2.5% !important;
+  }
+  
+  .login-cust-right-section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .card-center {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  
+  @media only screen and (max-width: 1256px) {
+    .epmlgn-locale-val {
+      text-align: center;
+      font-size: 12px;
+    }
+  }
+  
+  @media only screen and (min-width: 1256px) {
+    .epmlgn-locale-val {
+      text-align: center;
+      font-size: 12px;
+    }
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    .epm-title-logo {
+      width: 35vh !important;
+      height: 10vh !important;
+    }
+  
+    .locale-sm-hidden {
+      visibility: hidden;
+    }
+  
+    .epb-bottom-sec {
+      visibility: hidden;
+    }
+  
+    .epblgn-lgn-card-rt-section {
+      display: none;
+    }
+  
+    .login-card {
+      border-bottom-right-radius: 18px;
+      border-top-right-radius: 18px;
+    }
+  
+    .epmlgn-locale-val {
+      text-align: center;
+      font-size: 12px;
+    }
+  }
+  
+  @media only screen and (max-width: 640px) {
+    .epm-title-logo {
+      width: 35vh !important;
+      height: 10vh !important;
+    }
+  
+    .locale-sm-hidden {
+      visibility: hidden;
+    }
+  
+    .epb-bottom-sec {
+      visibility: hidden;
+    }
+  
+    .epmlg-cpright-section {
+      display: none;
+    }
+  
+    .login-cust-right-section {
+      display: none;
+    }
+  
+    .pinvoice-cust-left-section {
+      display: none;
+    }
+  
+    .login-card {
+      border-bottom-right-radius: 18px;
+      border-top-right-radius: 18px;
+      width: auto !important;
+      padding: 0;
+      margin: 0 10%;
+    }
+  }
+  
+  .slider-div {}
+  
+  .img-div {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: -3%;
+  }
+  
+  .epmlgn-text-div {
+    padding: 4% 4% 0 4% !important;
+    text-align: center;
+  }
+  
+  .epmlgn-title-section {
+    text-align: center;
+    font-size: 21px;
+    padding: 3% 0 !important;
+  }
+  
+  .epmlgn-subtitle-section {
+    text-align: center;
+    padding: 2% 6% !important;
+    line-height: 22px;
+    min-height: 106px;
+    font-weight: 300;
+  }
+  
+  .pinvoice-remember-me {
+    margin-top: -3%;
+    font-size: 12px;
+  }
+  
+  .help {
+    font-size: 19px;
+    height: 65px;
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .login-card {
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+    padding: 0;
+    width: 50%;
+    height: auto;
+    display: flex;
+    box-shadow: -7px 9px 20px 1px #888888;
+  }
+  
+  .pinvoice-pwd-field {
+    margin-top: -2%;
+  }
+  
+  .border-0 {
+    border-right: 0;
+  }
+  
+  .pinvoice-show-hide {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  ::ng-deep .langSelect div.mat-select-arrow-wrapper {
+    display: none;
+  }
+  
+  ::ng-deep .langSelect.mat-select {
+    display: inline;
+  }
+  
+  .clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+  
+  .fas {
+    cursor: pointer;
+  }
+  
+  .footer-div {
+    height: 6vh;
+    border-bottom: none;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .footer-text {
+    font-size: 12px;
+    line-height: 100%;
+    font-weight: 400;
+    font-family: Lato, Helvetica, Arial, sans-serif;
+    padding: 0;
+    margin: 0 auto;
+  }
+  
+  .user-icon {
+    width: 1.2em !important;
+  }
+  
+  :host ::ng-deep .mat-form-field-flex>.mat-form-field-infix {
+    padding: 0.3em 0px 0.5em 0px !important;
+  }
+  
+  :host ::ng-deep .mat-form-field-label-wrapper {
+    top: -1em;
+  }
+  
+  .or-divider {
+    width: 100%;
+    text-align: center;
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+  }
+  
+  .or-divider span {
+    padding: 0 20px;
+    font-size: 20px;
+  }
+  
+  .lgn-fl-end {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .lgn-p-0 {
+    padding: 0;
+  }
+  
+  .fis-pricing-billing {
+    color: #4BCD3E;
+    font-family: sans-serif;
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 900;
+    white-space: break-spaces;
+    display: inline-block;
+    transform: scaleY(1.1);
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+    padding-left: 1%;
+    text-align: end;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 1%;
+  }
+  
+  input::-ms-reveal,
+  input::-ms-clear {
+    display: none;
+  }
+  

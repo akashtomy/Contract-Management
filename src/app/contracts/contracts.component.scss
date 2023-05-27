@@ -1,0 +1,20 @@
+.add-tn-header {
+    align-items: center;
+    display: flex;
+    justify-content: end;
+    // height: 8% !important
+}
+
+
+/// responsive table css 
+//  table-layout: fixed;
+// display: inline-flex;
+// flex-flow: row wrap;y
+
+.add-btn-agreements {
+    margin-right: 2%;
+    margin-left: 2%;
+}
+::ng-deep tr.mat-footer-row  :hover {
+    background-color: red;
+}

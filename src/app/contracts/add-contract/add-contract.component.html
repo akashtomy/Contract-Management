@@ -1,0 +1,147 @@
+<div class="ui-g flex-center">
+    <ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "ball-scale-multiple" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
+
+    <mat-card class="ui-lg-12 ui-md-12 ui-g-12 dialog-header" style="display: flex;">
+        <!-- <i class="fas fa-binoculars ocular-app-card-header-icon" style="font-size: 20px; padding-right: 5px;"></i> -->
+        <!-- <span class="" style="font-size: 20px;">
+        {{utilityService.getLabelDesc(compData?.label,'ADD_LOOKUP')}}
+      </span> -->
+        <span style="font-size: 20px;">Add New Agreement </span>
+        <span class="material-symbols-outlined error-icon" (click)="onClose()">
+            close
+        </span>
+        <!-- <span style="font-size: 20px;"
+        *ngIf="lookupData.type === 'add'">{{utilityService.getLabelDesc(compData?.label,'ADD_LOOKUP')}}</span> -->
+    </mat-card>
+    <div class="ui-lg-12 ui-md-12 ui-g-12 " style="padding-left: 0px; padding-bottom: 0px; padding-right: 0;">
+
+        <form [formGroup]="contractForm" (ngSubmit)="onSave()">
+
+            <div class="ui-lg-6 ui-md-6 ui-g-6 ">
+                <mat-form-field class="w-80">
+
+                    <input matInput formControlName="contractName" required placeholder="Name of Work">
+
+                </mat-form-field>
+            </div>
+
+            <!-- <div class="ui-lg-6 ui-md-6 ui-g-6 ">
+                <mat-form-field class="w-80">
+
+                    <input matInput formControlName="contractName" required placeholder="Contract Name">
+
+                </mat-form-field>
+            </div> -->
+
+            <div class="ui-lg-6 ui-md-6 ui-g-6 ">
+                <!-- <mat-form-field class="w-80">
+
+                    <input matInput [matDatepicker]="picker" formControlName="startDate" required placeholder="Start Date">
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+
+                </mat-form-field> -->
+
+                <mat-form-field class="w-80">
+                    <input matInput 
+                      placeholder="LOA Date"
+                      formControlName="startDate" required [matDatepicker]="startDate"  >
+                    <mat-datepicker-toggle matSuffix [for]="startDate"></mat-datepicker-toggle>
+                    <mat-datepicker #startDate></mat-datepicker>
+                  </mat-form-field>
+            </div>
+
+            <div class="ui-lg-6 ui-md-6 ui-g-6 ">
+                <!-- <mat-form-field class="w-80">
+
+                    <input matInput formControlName="endDate" required placeholder="End Date">
+
+                </mat-form-field> -->
+                <mat-form-field class="w-80">
+                    <input matInput 
+                      placeholder="End Date"
+                      formControlName="endDate" required [matDatepicker]="endDate"  >
+                    <mat-datepicker-toggle matSuffix [for]="endDate"></mat-datepicker-toggle>
+                    <mat-datepicker #endDate></mat-datepicker>
+                  </mat-form-field>
+            </div>
+
+            <div class="ui-lg-6 ui-md-6 ui-g-6 ">
+                <mat-form-field class="w-80">
+
+                    <input matInput formControlName="location" required placeholder="Location">
+
+                </mat-form-field>
+            </div>
+
+            <div class="ui-lg-6 ui-md-6 ui-g-6 ">
+                <mat-form-field class="w-80">
+
+                    <input matInput formControlName="budget" required placeholder="CA Value">
+
+                </mat-form-field>
+            </div>
+<!-- 
+            <div class="ui-lg-6 ui-md-6 ui-g-6 ">
+                <mat-form-field class="w-80">
+
+                    <input matInput formControlName="contractorName" required placeholder="Name of Contractor">
+
+                </mat-form-field>
+            </div> -->
+
+            <div class="ui-lg-6 ui-md-6 ui-g-6">
+                <mat-form-field class="w-80">
+                  <mat-select appRoleOptionAttribute role="listbox" formControlName="status" required
+                    placeholder="Status">
+                    <mat-option role="option"  value="ACT">
+                      On Going
+                    </mat-option>
+                    <mat-option role="option"  value="CMP">
+                        Finalised
+                      </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+
+            <div class="ui-lg-6 ui-md-6 ui-g-6 ">
+                <mat-form-field class="w-80">
+
+                    <input matInput formControlName="description"  placeholder="Description">
+
+                </mat-form-field>
+            </div>
+
+
+              <div class="ui-lg-6 ui-md-6 ui-g-6">
+                <!-- <mat-form-field class="w-80"> -->
+
+                    <input   type="file" class="file-input"
+                    (change)="onFileSelected($event)" #fileUpload >
+
+                <!-- </mat-form-field> -->
+
+                <div class="file-upload">
+
+                    {{'' || "No file uploaded yet."}}
+                 
+                     <button mat-mini-fab color="primary" class="upload-btn"
+                       (click)="fileUpload.click()" type="button">
+                         <mat-icon>attach_file</mat-icon>
+                     </button>
+                 </div>
+            </div>
+
+
+            <div class="ui-lg-12 ui-md-12 ui-g-12 flex-end pb-20" mat-dialog-actions>
+                <span>
+                    <button type="submit" mat-raised-button color="primary" [disabled]="!contractForm.valid"
+                        class="save-btn save-btn-color">
+                        save
+                    </button>
+                </span>
+            </div>
+        </form>
+
+    </div>
+</div>
