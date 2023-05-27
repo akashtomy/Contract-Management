@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/pinvoice'),
+      dir: require('path').join(__dirname, './coverage/contract-app'),
       subdir: '.',
       reporters: [
         { type: 'html' },

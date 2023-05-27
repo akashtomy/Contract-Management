@@ -112,7 +112,7 @@
     border-style: solid;
   }
   
-  ::ng-deep .pinvoice-remember-me {
+  ::ng-deep .contract-app-remember-me {
   
     & .mat-checkbox-background,
     .mat-checkbox-frame {
@@ -121,13 +121,13 @@
     }
   }
   
-  .pinvoice-lgn-card-rt-section {
+  .contract-app-lgn-card-rt-section {
     flex: 1;
     display: flex;
     justify-content: space-between;
   }
   
-  .pinvoice-fields {
+  .contract-app-fields {
     padding-top: 1.5% !important;
     padding-bottom: 1.5% !important;
     display: flex;
@@ -136,7 +136,7 @@
     flex: 1;
   }
   
-  .pinvoice-logo-fields {
+  .contract-app-logo-fields {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -260,7 +260,7 @@
     transition: background-color 5000s ease-in-out 0s;
   }
   
-  .pinvoice-help-div {
+  .contract-app-help-div {
     text-align: center;
   }
   
@@ -374,7 +374,7 @@
       display: none;
     }
   
-    .pinvoice-cust-left-section {
+    .contract-app-cust-left-section {
       display: none;
     }
   
@@ -415,7 +415,7 @@
     font-weight: 300;
   }
   
-  .pinvoice-remember-me {
+  .contract-app-remember-me {
     margin-top: -3%;
     font-size: 12px;
   }
@@ -437,7 +437,7 @@
     box-shadow: -7px 9px 20px 1px #888888;
   }
   
-  .pinvoice-pwd-field {
+  .contract-app-pwd-field {
     margin-top: -2%;
   }
   
@@ -445,7 +445,7 @@
     border-right: 0;
   }
   
-  .pinvoice-show-hide {
+  .contract-app-show-hide {
     position: relative;
     cursor: pointer;
   }
